@@ -1,0 +1,7 @@
+build
+icestorm
+nextpnr
+*.gtkw
+*.vcd
+__pycache__/
+*.pyc
