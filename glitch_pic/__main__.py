@@ -1,12 +1,12 @@
 from glitch_pic import Glitcher
-from nmigen_boards.tinyfpga_bx import *
+from luna.gateware.platform.tinyfpga import *
 from nmigen import *
 from nmigen.build import *
 
 import sys
 
 if sys.argv[1] == "program":
-    platform = TinyFPGABXPlatform()
+    platform = TinyFPGABxPlatform()
     platform.add_resources([Resource("glitch_trig", 0, Pins("A2", dir="o"), Attrs(IO_STANDARD="SB_LVCMOS33"))])
     platform.add_resources([Resource("target_reset", 0, Pins("A1", dir="o"), Attrs(IO_STANDARD="SB_LVCMOS33"))])
 
